@@ -1,0 +1,200 @@
+.container-fluid {
+	position: relative;
+}
+.container-fluid .export-report {
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	padding: 7px 19px;
+	font-weight: normal;
+}
+input[type="search"] {
+    margin: 8px 10px 0px 0px;
+	padding: 2px 15px;
+	width: 135px;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-borer-radius: 25px;
+}
+.container-fluid table {
+	margin: 120px auto 0px auto;
+}
+.container-fluid table th {
+	padding: 10px 5px;
+}
+.remove {
+	display: inline-block;
+	background: url("images/remove.png") no-repeat center;
+	width: 31px;
+	height: 31px;
+}
+.form-horizontal, .view_wrapper {
+	margin: 60px 0px 0px 0px;
+}
+.control-group-wrapper {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.control-group-wrapper .control-group {
+	width: 100%;
+	max-width: 450px;
+	float: left;
+	margin-bottom: 12px;
+}
+.navbar .nav > li > a { font-weight: bold; }
+
+	
+	
+	
+
+/*--- Sign in ---*/
+.signin-logo {
+	padding: 40px 0 40px 0;
+	text-align: center;
+}
+.signin-box {
+	background: whiteSmoke;
+	border: #D1D1D1 1px solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px 1px #FCFCFC inset, 0 1px 2px 1px #E9E9E9;
+	margin: 0 auto;
+	width: 400px;
+	position: relative;
+}
+.signin-box input[type="submit"] { width: 100px; }
+.signin-content {
+	padding: 35px 30px 18px 30px;
+}
+.signin-content .row {
+	margin-left: -20px;
+}
+.signin-content .clearfix {
+	margin-bottom: 10px;
+}
+.signin-content label {
+	display: inline-block;
+	float: left;
+	width: 100px;
+	margin-top: 15px;
+	padding: 0 20px 0 0;
+	font-family: "HelveticaNeueRegular", Helvetica, Arial, sans-serif;
+	color: #6A675E;
+	font-size: 15px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #F9F9F9;
+	text-align: right;
+}
+.signin-content .input {
+	margin-left: 120px;
+}
+.signin-content input[type="text"], .signin-content input[type="password"] {
+	padding: 12px 5px;
+	width: 235px;
+}
+.form-required {
+	color: red;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: -7px;
+	float: left;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 5px 9px;
+	font-size: 15px;
+	color: #7B7B7B;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: #C9C9C9 1px solid;
+	-moz-box-shadow: 0 1px 2px 1px #e4e4e4 inset;
+	-webkit-box-shadow: 0 1px 2px 1px #E4E4E4 inset;
+	box-shadow: 0 1px 2px 1px #E4E4E4 inset;
+	font-family: "HelveticaNeueLight", Helvetica, Arial, sans-serif;
+}
+textarea { resize: none; }
+label { font-weight: bold; }
+.control-group-wrapper input[type="button"]{ 
+	margin: -15px 60px 0px 0px;
+	line-height: 35px;
+	padding: 0px;
+	width: 125px;
+}
+.signin-bottom {
+	text-align: center;
+	background: #EDEDED;
+	padding: 10px 30px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	margin: 0 !important;
+}
+form .btn {
+	margin: 0px 0px 0px 10px;
+	padding: 11px 12px;
+}
+.btn-mid-yellow {
+	display: inline-block;
+	background: #EBC968;
+	background: -moz-linear-gradient(top, #F4E87F, #EBC968);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F4E87F), to(#EBC968));
+	-webkit-border-radius: 4px;
+	-moz-box-shadow: 0 1px 0 #dddddd, 0 1px 0 #f7f2c8 inset;
+	-webkit-box-shadow: 0 1px 0 #DDD, 0 1px 0 #F7F2C8 inset;
+	box-shadow: 0 1px 0 #DDD, 0 1px 0 #F7F2C8 inset;
+	text-shadow: 0 1px 0 #F3E9C1;
+	border: 1px solid #E0C167;
+	color: #745106;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 9px 19px;
+}
+.btn-mid-yellow:hover {
+	background: -moz-linear-gradient(top, #EBC968,#F4E87F);
+	background: -webkit-gradient(linear, left top, left bottom, from(#EBC968), to(#F4E87F));
+}
+
+/*--Contact Page --*/
+.contact-page { 
+	width: 100%;
+	max-width: 600px;
+	margin-top: 60px; 
+}
+.contact-page h2 {
+	font-size: 19px;
+}
+.contact-page .admin {
+	padding: 5px 5px 0px 0px;
+	margin: 20px 0px 30px 0px;
+	box-shadow: 0 0 2px 2px #bbb;
+	-webkit-box-shadow: 0 0 2px 2px #bbb;
+	-moz-box-shadow: 0 0 2px 2px #bbb;
+}
+.contact-page .admin div { margin-left: 20px; }
+.contact-page .image-wrapper img {
+  padding: 5px;
+  max-height: 135px;
+}
+.contact-page .name {
+	font-weight: bold;
+}
+.contact-page .esc { 
+	margin-top: 20px;
+	text-align: center; 
+}
+
+/*--COMMON STYLES --*/
+
+.view_wrapper  span {
+	font-weight: bold;
+	display: inline-block;
+	width: 160px;
+}
+.control-group-wrapper .control-group.commentSection {
+	max-width: 100%;
+}
+#no-more-tables tbody tr { cursor: pointer; }
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>ITB</title>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="navbar navbar-fixed-top">
+	   <div class="navbar-inner">
+	      <div class="container-fluid">
+			 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			   <span class="icon-bar"></span>
+			   <span class="icon-bar"></span>
+			   <span class="icon-bar"></span>
+			 </a>
+	         <a class="brand" href="./">Itron Transport</a>
+			 <div class="nav-collapse">
+	            <ul class="nav">
+	              <li><a href="/viewData">View Data</a></li>
+	             
+	             
+	             	  {% if session['is_admin'] %}
+		       
+	             	 <li class=""><a href="/addUser">Add User</a></li>
+	             {% endif %}
+	             
+				  <li class="active"><a href="/contact">Contact</a></li>
+	            </ul>
+				<ul class="nav pull-right">
+				  <li><input type="search" placeholder="Search..."></li>
+				  <li><a href="./logout">Sign Out</a></li>
+				</ul>
+	          </div><!--/.nav-collapse -->
+	      </div>
+	   </div>
+	</div>
+	<div class="container contact-page">
+		<div class="admin clearfix">
+			<div class="pull-left">
+				<h2>ITRON Manager</h2>
+				<p class="name">Pawan Porwal</p>
+				<p>Email id : Someone@somewhere.com</p>
+				<p>Phone: +91 8884870889</p>
+			</div>
+			<div class="pull-right image-wrapper">
+				<img src="static/images/Itron_Logo.png" alt="Sami Ul Huda"/>
+			</div>
+		</div>
+		<div class="spoc-wrapper clearfix">
+			<div class="spoc pull-left">
+				<h2>AMB Travels</h2>
+				<p class="name">Ashoke Someone</p>
+				<p>Email id : Someone@somewhere.com</p>
+				<p>Phone: +91 8884090889</p>
+			</div>
+			
+			<div class="spoc pull-right">
+				<h2>Portal Issues</h2>
+				<p class="name">Sami ul Huda</p>
+				<p>Email id : Someone@somewhere.com</p>
+				<p>Contact: +91 8884110889</p>
+			</div>
+		</div>
+		<div class="esc">
+			<h2>Escalation Point</h2>
+			<p class="name">Sudhakar G</p>
+			<p>Contact: +91 8889710889</p>
+		</div>
+	</div>
+
+
+</body>

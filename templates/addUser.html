@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>ITB</title>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="navbar navbar-fixed-top">
+	   <div class="navbar-inner">
+	      <div class="container-fluid">
+			 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			   <span class="icon-bar"></span>
+			   <span class="icon-bar"></span>
+			   <span class="icon-bar"></span>
+			 </a>
+	         <a class="brand" href="./">Itron Transport</a>
+			 <div class="nav-collapse">
+	            <ul class="nav">
+	              <li><a href="/viewData">View Data</a></li>
+	             
+	             
+	             	 <li class="active"><a href="/addUser">Add User</a></li>
+	             
+				  <li><a href="/contact">Contact</a></li>
+	            </ul>
+				<ul class="nav pull-right">
+				  <li><input type="search" placeholder="Search..."></li>
+				  <li><a href="./logout">Sign Out</a></li>
+				</ul>
+	          </div><!--/.nav-collapse -->
+	      </div>
+	   </div>
+	</div>
+	
+	<div class="container-fluid">
+		<form action="/addUser" method="POST" class="form-horizontal" autocompete="false"> 
+			<div style="color:red">{{errors}}</div>
+			<div class="control-group-wrapper clearfix">
+				<div class="control-group">
+					<label class="control-label" for="p_id">Employee ID</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<input type="text" class="text" id="p_id" name="employeeId" required="" placeholder="Itron Employee Id">
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<label class="control-label" for="flow">Email</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<input type="text" class="text" id="flow" name="email" required="" placeholder="Itron Email Id">
+					</div>
+				</div>
+		    </div>
+	    
+	    	
+			<div class="control-group-wrapper clearfix">
+				<div class="control-group">
+					<label class="control-label" for="flow">Name</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<input type="text" class="text" id="flow" name="employeeName" required="" placeholder="Employee Name" value="" autocomplete="off">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="p_id">Manager</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<select class="form-control" name="managerId">
+							{% for manager in managers %}
+								<option value="{{manager.id}}">{{manager.name}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				
+				
+	    	</div>
+	    	<div class="control-group-wrapper clearfix">
+				<div class="control-group">
+					<label class="control-label" for="p_id">Password</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<input type="password" class="text" id="p_id" required="" name="password" value="">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="flow">Support Team</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<input type="text" class="text" id="flow" required="" name="gateWay">
+					</div>
+				</div>
+			</div>
+	    
+	    	<div class="control-group-wrapper clearfix">
+	    		<div class="control-group">
+					<label class="control-label" for="p_id">Gender</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<div style="margin-top: 5px;">
+						    <label class="radio-inline">
+							  <input type="radio" name="gender"  value="M" checked> Male
+							</label>
+							<label class="radio-inline" style="margin-left:20px;">
+							  <input type="radio" name="gender"  value="F"> Female
+							</label>
+						</div>
+					</div>
+				</div>
+	    		<div class="control-group">
+					<label class="control-label" for="flow">Employee Type</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<div style="margin-top: 5px;">
+						    <label class="radio-inline">
+							  <input type="radio" name="employeeType"  value="1" checked> Regular
+							</label>
+							<label class="radio-inline" style="margin-left:20px;">
+							  <input type="radio" name="employeeType"  value="0"> Contractor
+							</label>
+						</div>
+					</div>
+				</div>
+				
+		    </div>
+	    
+	    	<div class="control-group-wrapper clearfix">
+				<div class="control-group">
+					<label class="control-label" for="p_id">Transport</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<div style="margin-top: 5px;">
+						    <label class="radio-inline">
+							  <input type="radio" name="transport"  value="1" checked> Yes
+							</label>
+							<label class="radio-inline" style="margin-left:20px;">
+							  <input type="radio" name="transport"  value="0"> No
+							</label>
+						</div>
+					</div>
+		    	</div>
+		    	
+		   	<div class="control-group">
+					<label class="control-label" for="flow">User Type</label>
+					<span class="form-required" title="This field is required.">.</span>
+					<div class="controls">
+						<div style="margin-top: 5px;">
+						    <label class="radio-inline">
+							  <input type="radio" name="usertype"  value="1" checked> Admin
+							</label>
+							<label class="radio-inline" style="margin-left:20px;">
+							  <input type="radio" name="usertype"  value="0"> Not Admin
+							</label>
+						</div>
+					</div>
+			</div>	
+	    
+	    	</div>
+	    	    	
+			
+	    
+		    <div class="control-group-wrapper">
+		    <div style="margin-top: 10px;">
+				<input id="Button1" type="button" value="Submit" class="pull-right btn btn-mid-yellow" onclick="insert_data()" ;="" style="height: 35px; width: 125px">	
+			</div>
+  		</form>
+	</div>
+	<script>
+
+		function insert_data(){
+			
+			//TODO validation
+			document.forms[0].submit();
+		}
+	</script>
+	</div>
+</body>
+

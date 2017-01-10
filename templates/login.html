@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>ITB</title>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+	{% block body %}
+		{% if session['logged_in'] %}
+		<p>You're logged in already!</p>
+	{% else %}
+		<div class="container">
+		<!-- ----------------- LOGO -----------------  -->
+	    <div class="signin-logo alg-center">
+	      <img src="{{ url_for('static',filename='images/Itron_Logo.png') }}" alt="Itron-logo"/>
+	    </div>
+		<form action="/login" method="POST">
+	      <div class="signin-box">
+	        <div class="signin-content">
+	          <div class="row">
+	            <div class="clearfix">
+	              <label for="inputEmail">User Name</label>
+	              <div class="input">
+	                <input type="text" name="username" id="username" value="" class="span6" placeholder="User Name"/>
+	              </div>
+	            </div>
+	            <div class="clearfix">
+	              <label for="inputPass">Password</label>
+	              <div class="input">
+	                <input type="password" name="password" id="password" value="" class="span6" placeholder="Password"/>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div class="signin-bottom clearfix">
+	          <input type="submit" name="submit" id="submit" value="Sign In" class="btn btn-mid-yellow"/>
+	        </div>
+
+	        </div>
+	    </form>
+	{% endif %}
+	{% endblock %}
+</body>
+</html>
